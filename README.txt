@@ -161,7 +161,7 @@ Classes:
   ● Tree: contains the members and functions of the Tree.  Inherartes from StaticObject.
 Vectors:
 --------
-Most of the vectors in the game contains smart pointers "shared_ptr" as thier cells, each pointer
+Most of the vectors in the game contain smart pointers "shared_ptr" as thier elements, each pointer
 points (usually) to an object of a certain class.
 ---------------------------------------------------------------------------------------------------------
 ------------------------------------------ Noteable Algorithms ------------------------------------------
