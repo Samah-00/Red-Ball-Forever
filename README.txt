@@ -10,12 +10,12 @@ Red Ball Forever is a 2D platform game starring a red rolling ball whose goal is
 The player joins the ball on its adventure across a series of levels with increasing difficulty.
 The player controles the ball's moves using the arrows of the keyboard or the letters (A: right, D: left
 W: up). He must lead it to the red flag at the end of each level in order to win the level.
-In the game, there are some obstacles such as water, monster and spikes that would cause the ball to 
-lose meaning the ball should avoid these obstaclesin order to reach the flag at the end of the map.
+In the game, there are some obstacles such as monsters, water and spikes that would cause the ball to 
+lose meaning the ball should avoid these obstacles in order to reach the flag at the end of the map.
 Here is how the collision of the ball with the different objects affects the player:
  ● collision with the red flag: the player wins the current level and levels up.
  ● collision with the monster: the player immediately loses the level and repeats it.
- ● collision with the sea: the player immediately loses the level and repeats it.
+ ● collision with water: the player immediately loses the level and repeats it.
  ● collision with a spike: the player loses a life (out of three lives).
  ● collision with a star: adds 100 to the score.
 For each level, the player has three lives. The game contains three levels.
@@ -32,9 +32,9 @@ a Controller object that manages its level as follows:
 the level, creates a box2d world and initializes the Map of the current level (more about the map is
 following), the function Controller::run() handles the game by initializing the elements of the game
 such as Map and redFlag. Then, in a while loop, the function continues to handle the window of the game:
-For each ineration, the function updates the positions and statuses of the box2d bodies and SFML elements
+For each iteration, the function updates the positions and statuses of the box2d bodies and SFML elements
 of the game, calls for functions that check the collision of the ball with other elements then takes
-an action according to the results it recieves and displays the score on the window.
+an action according to the results it recieves and displays the player's score on the window.
 Finally, the controller handles the input of the player and calls for the function Ball::move() to handle
 the ball's movement.
  ● The map object contains the "map" of the game; meaning that it contains the ground blocks, water
